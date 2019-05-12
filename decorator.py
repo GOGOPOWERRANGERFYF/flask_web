@@ -1,3 +1,5 @@
+#  *args 可变参数  将参数封装成一个tuple元组
+#  ×kwargs 关键字参数   将参数封装成一个字典dictionary
 def wrapper(func):
     def inner(*args,**kwargs):
         return func(*args,**kwargs):
@@ -21,7 +23,7 @@ def route(url):
 #2.返回inner       
 # 3.@inner
 # 4. index=inner(index)
-@route('/index')
+@route('/index')  #带参数的装饰器decorator
 def index():
     return 'index'
 
