@@ -14,6 +14,10 @@ def index(request):
 
 
 #@route装饰器url绑定view function视图函数原理
+url_map={
+    '/index':index
+}
+
 def route(url):
     def inner(func,*args,**kwargs):
         url_map['url'] = func
@@ -28,7 +32,4 @@ def index():
     return 'index'
 
 
-url_map={
-    '/index':index
-}
 
