@@ -8,6 +8,11 @@ def homepage():
 
 @home.route('/login',methods=['GET','POST'])
 def login():
+    if request.method == 'POST':
+        name = request.form['name']
+        passwd = request.form['password']
+        #return '%s %s' % (name,passwd)
+        return render_template('login.html',name=name,passwd=passwd)
     return render_template('login.html')
 
 @home.route('/articles')

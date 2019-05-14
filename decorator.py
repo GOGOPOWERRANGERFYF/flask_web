@@ -20,7 +20,7 @@ url_map={
 
 def route(url):
     def inner(func,*args,**kwargs):
-        url_map['url'] = func
+        url_map[url] = func
         #return url
     return inner
 #1.先执行route('/index')
