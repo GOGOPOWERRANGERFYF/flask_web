@@ -1,0 +1,2 @@
+class SettingA():
+    debug = True
