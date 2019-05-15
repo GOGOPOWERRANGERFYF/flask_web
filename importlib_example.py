@@ -26,13 +26,23 @@ r = importlib.import_module(m)    #importlib模块import_module函数（）调�
 #print(x)
 #y = r.__str__()
 #print(y)
-print(r)
-print(type(r))
+print(r)    #输出：<module 'settings' from '/home/fyf/flask_web/settings.py'>     模块settings
+print(type(r))   #输出：<class 'module'>     所以r是module类的实例，是一个对象
 print(getattr(r,c))    #取r对象的c属性
 
 cls = getattr(r,c)
 x = cls()
 print(x.debug)
+
+print(dir(cls))
+
+for key in dir(cls):
+    if key == 'debug':
+        print(key)
+
+
+
+
 
 
 
