@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+<body>
+    <a href='https://www.baidu.com'>百度</a>
+    <a href='#'>超链接1</a>
+    <a href='#' target='_blank'>超链接2(打开新窗口)</a>
+    <b>粗体bold</b>
+    <strong>强调加粗</strong>
+    <!--<em>斜体注释</em>-->
+    <i>斜体italic</i>
+
+    <table border='1' align='center'><!--html5趋势：样式统一由CSS控制。align对齐,border现在都不推荐使用了-->
+        <thead><!--目前看不到效果，CSS中会有用-->
+            <tr><!--table row行-->
+                <th>姓名</th><!--table head-->
+                <th>年龄</th>
+                <th>学号</th>
+                <th>成绩</th>
+            </tr>
+        </thead><!--目前看不到效果，CSS中会有用-->
+        <tbody><!--目前看不到效果，CSS中会有用-->
+            <tr><!--table row行-->
+                <td rowspan='2'>小明</td><!--table data-->
+                <td>9</td>
+                <td>123456</td>
+                <td>88</td>
+            </tr>
+            <tr><!--table row行-->
+                <td colspan='2'>小黄</td>
+                <td>100</td>
+            </tr>
+        </tbody><!--目前看不到效果，CSS中会有用-->
+        <tfoot><!--目前看不到效果，CSS中会有用-->
+            <tr><!--table row行-->
+                <td>name</td>
+                <td>age</td>
+                <td>id</td>
+                <td>score</td>
+            </tr>
+        </tfoot><!--目前看不到效果，CSS中会有用-->
+    </table>
+
+    <ol><!--order list有序列表-->
+        <li>小标题</li>
+        <ol type="a">
+            <li>列表项1</li><!--list item li指列表项-->
+            <li>列表项2</li>
+            <li>列表项3</li>
+        </ol>
+    </ol>
+    <ol reversed><!--order list有序列表 反转-->
+        <li>列表项1</li><!--list item li指列表项-->
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ol>
+    <ul><!--unordered list无序列表-->
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ul>
+
+    <form method="POST">
+        <input type='text'>
+        <br><br><!--broken row-->
+        <input type='text' value='我是value'>
+        <br><br>
+        <input type='password' placeholder='密码'><!--占位符-->
+        <br><br>
+        <input type='text' placeholder='用户名' maxlength='8'><!--最大字符长度-->
+        <br><br>
+        <input type='text' size='50'><!--输入框长度-->
+        <br><br>
+        <input type='text' value='readonly属性 只读删不掉' readonly>
+
+    <textarea><!--文本区域，多行文本框-->
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </textarea>
+    <textarea row='20'><!--文本区域，多行文本框 设置20行 IE浏览器使用，因在IE中textarea是固定的-->
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </textarea>
+
+    <input type='submit' value='提交'><!--提交表单,必须在form中声明method-->
+    <input type='button' value='按钮'><!--与js一起用作为绑定处理事件,比上面的适用范围大-->
+    <button>按钮</button><!--比上面两个功能多-->
+
+    <br><br>
+    <input type='range' min='-100' max='100'><!--range范围，可拉动的那个框,数值在chrome不显示，需要其它处理-->
+    <input type='range' min='-100' max='100' step='100' value='-100'><!--拉动一次100，初始值-100-->
+    <br><br>
+    <input type='number' min='1' max='12' value='1'>
+    <br><br>
+    <input type='checkbox'>篮球<!--检查框 （复选框）-->
+    <input type='checkbox'>足球
+    <input type='checkbox'>羽毛球
+    <br><br>
+    <input type='radio' name='1'>小学<!--要做成单选，需加name属性，且赋值都一样,入例子所示-->
+    <input type='radio' name='1'>中学
+    <input type='radio' name='1'>大学
+    <br><br>
+    <input type='radio' name='2'>小学<!--要做成单选，需加name属性，且赋值都一样,入例子所示-->
+    <input type='radio' name='2' checked>中学<!--必须选一个，加checked属性-->
+    <input type='radio' name='2'>大学
+    <br><br>
+    <select><!--选择框--><!--不可添加选项-->
+        <option>1月份</option>
+        <option>2月份</option>
+        <option>3月份</option>
+    </select>
+
+    <input type='text' list='datalist1'>
+    <datalist id='datalist1'><!--可添加选项-->
+        <option>1月份</option>
+        <option>2月份</option>
+        <option>3月份</option>
+    </datalist>
+    <br><br>
+    <input type='email' placeholder='输入邮箱'>
+    <input type='tel' placeholder='输入手机号码'>
+    <input type='url' placeholder='输入网址url'>
+    <input type='date'><!--IE不兼容,貌似也没什么人用IE了吧XD-->
+    <input type='color'><!--获取颜色-->
+    <input type='search'><!--搜索框-->
+    <input type='hidden' name='xxx'><!--网页不会显示，但还是会提交这个表单-->
+
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
