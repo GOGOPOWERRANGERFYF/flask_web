@@ -1,10 +1,12 @@
 from flask import Flask,render_template,request
+from flask_bootstrap import Bootstrap
 
 home = Flask(__name__)
+bootstrap = Bootstrap(home)
 
 @home.route('/')
 def homepage():
-    return render_template('home.html')
+    return render_template('test.html')
 
 @home.route('/login',methods=['GET','POST'])
 def login():
