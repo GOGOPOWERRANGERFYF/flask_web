@@ -136,6 +136,29 @@
         <input type='file' multiple><!--上传多个文件 multiple数量多的-->
     </form>
 
+    <img src='./static/timg.jpg' height='100' weight='100'>
+    <img src='./static/timg111.jpg' height='100' weight='100' alt='找不到图片'><!--alternative  可供替代的，找不到图片时显示的内容-->
+
+    <a href='https://baidu.com' target='_blank'><!--基于图片做超链接,blank空白的   作用：浏览器新空白页打开链接-->
+        <img src='./static/timg.jpg' height='100' weight='100' alt='找不到图片'><!--alternative  可供替代的，找不到图片时显示的内容-->
+    </a>
+
+    <h5>form表单 input元素 type图片：用来查看图片里的图形坐标coords</h5>
+    <form><!--通过这个表单的input元素查看图片里区域的（不是网页里）x，y坐标-->
+        <input type='image' src='./static/rect.jpg' weight='100' height='100' alt='找不到图片'>
+    </form>
+    <h5>图片分区响应实例：点击圆圈外是没有点击超链接效果的，click点击圈内可以</h5>
+    <!-- 创建客户端分区响应图 :通过点击图片上的不同区域让浏览器在不同的url上-->
+    <img src='./static/login.jpg' height='100' weight='100' usemap='#map1' alt='找不到图片'><!--usemap与下面的map连接-->
+    <!-- mapper 映射  shape 形状 rect 矩形 circle 圆形-->
+    <map name="map1"><!--name是提交表单时传递给后台用来标示的，id一般在css和js里面做选择器 coords 坐标-->
+        <area shape='circle' coords='50,50,50' href='/login'><!--coords=(x,y,r)圆心坐标和半径-->
+    </map> 
+    
+    <img src='./static/ract.jpg' alt='找不到图片' height='100' weight='100' usemap='#map2'><!--#表示本页面，防止与其他页面的map冲突(我猜的XD)-->
+    <map name='map2'>
+        <area shape='rect' coords='5,12,93,79' href='/login'><!--coords依次为左边缘距离，上边缘距离，右边缘距离，下边缘距离，图片左上角为（0,0）坐标，(x,y,x,y)-->
+    </map>
 </body>
 </html>
 
