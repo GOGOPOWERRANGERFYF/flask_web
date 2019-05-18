@@ -4,7 +4,7 @@ from flask_bootstrap import Bootstrap
 home = Flask(__name__)
 bootstrap = Bootstrap(home)
 
-@home.route('/')
+@home.route('/',methods=['GET','POST'])
 def homepage():
     return render_template('test.html')
 
