@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css选择器</title>
+    <style type='text/css'>
+    /* 选择所有元素   优先级低于下面的选择器*/
+        * {
+            font-size: 50px;
+            color:cornflowerblue;
+        }
+    /* 根据元素类新选择 元素 */
+        a {
+            font-size: 20px;
+            color:chocolate;
+        }
+        p {
+            font-size: 15px;
+            color:darkcyan;
+        }
+        h1 {
+            font-size: 15px;
+            color:darkmagenta;
+        }
+        /* 根据类选择 元素 */
+        /* .class1获取类对象class1 */
+        .class1 {               
+            font-size:30px;
+            color:cyan;
+        }
+        /* 根据id选择 元素 */
+        /* id是唯一的，规范不推荐重复使用，虽然实际上可以 */
+        #id1 {
+            font-size: 50px;
+            color:chartreuse; 
+        }
+        /* 根据属性选择 元素 */
+        [href] {
+            font-size:18px;
+            color:darkblue;
+        }
+        [href='/login'] {
+            font-size:10px;
+            color:deeppink;
+        }
+        /* :冒号选择器   里面有很多属性，这里只选hover测试  hover:处于不稳定状态   在代码里表示一个模仿悬停时间*/
+        /* 优先级比 a(根据属性选择器 )高*/
+        a:hover {       
+            font-size: 20px;
+            color:chocolate;
+        }
+    </style>
+</head>
+<body>
+    <!-- css selector选择器  只存在在文档内嵌样式表和外部样式表-->
+    <!-- 选择所有元素 -->
+    <!-- 根据元素类型选择  元素-->
+    <!-- 根据类选择  元素-->
+    <!-- 根据id选择 元素 -->
+    <!-- 根据属性选择 元素 -->
+    <!-- 还有其他选择器等等。。。。。。 -->
+    <!-- : 冒号选择器 -->
+
+    <a>aaa根据元素类型选择 元素</a>
+    <p>ppp根据元素类型选择 元素</p>
+    <h1>hhh根据元素类型选择 元素</h1>
+    
+    <a class='class1'>根据类选择 元素</a>
+    <p class='class1'>根据类选择 元素</p>
+    <h2 class='class1'>根据类选择 元素</h2>
+
+    <p id='id1'>根据id选择 元素</p>
+
+    <a href='/'>根据属性选择 元素</a>
+    <a href='/articles'>根据属性选择 元素</a>
+    <a href='/login'>根据属性选择 元素</a>
+
+</body>
+</html>
