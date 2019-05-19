@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css3学习:css层叠样式表</title>
+
+    <!--a.css为外部样式表 css文件-->
+    <!-- 链接一个外部样式表   relates 联系 该属性定义当前文档与被链接文档之间的关系-->
+    <link rel='stylesheet' type='text/css' href='/static/theme.css'><!--对于这个project来说flask_web就是根目录？url的根目录是templates?-->
+
+    <!-- 文档内嵌样式表 -->
+    <!-- <style type='text/css'> -->
+        <!-- a { -->
+            <!-- font-size:50px; -->
+            <!-- color:#123fff; -->
+        <!-- } -->
+    <!-- </style> -->
 </head>
 <body>
+    <a>优先级：元素内嵌样式表>文档内嵌样式表>外部样式表</a>
+    <a>文档内嵌样式表效果,注释文档内嵌样式表后显示的是外部样式表的效果</a>
+
     <!-- 元素内嵌样式表 -->
     <a style='font-size: 30px;color: #fff000'>最基础的css元素及属性 style='font-size=30px;color #fff000'元素内嵌样式表</a>
+
+    <ol>
+        <li style='font-size: 25px;color: #787eee' type='text/css'>小标题,元素内嵌样式表效果
+            <ol type="a">
+                <li>外部样式表或文档内嵌样式表效果</li>
+                <li>外部样式表或文档内嵌样式表效果</li>
+                <li>外部样式表或文档内嵌样式表效果</li>
+            </ol>
+        </li>
+    </ol>
     
 </body>
 </html>
