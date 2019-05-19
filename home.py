@@ -6,7 +6,7 @@ bootstrap = Bootstrap(home)
 
 @home.route('/',methods=['GET','POST'])
 def homepage():
-    return render_template('cssselector.html')
+    return render_template('cssbb.html')
 
 @home.route('/login',methods=['GET','POST'])
 def login():
