@@ -1,0 +1,1 @@
+alert('hello world! I am javascript!我是从外部引入的javascript')
