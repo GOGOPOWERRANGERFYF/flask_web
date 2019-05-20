@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css 盒子模型</title>
+    <style type='text/css'>
+        .class1 {
+           border-width:5px;
+           border-style:solid;
+           border-color:cadetblue; 
+           margin-top:100px;
+           margin-right:50px;
+           margin-left:50px;
+           margin-bottom:100px;
+           padding-top:50px;
+           padding-right:100px;
+           padding-left:100px;
+           padding-bottom:50px;
+           background-color:cornflowerblue;
+           background-clip:content-box;
+        }
+    </style>
 </head>
 <body>
-    <!-- division分隔  用于排版 -->
-    <div>
-
+    <!-- clip修剪  background-clip背景修剪-->
+    <!-- division分隔  用于排版 ;  alternative 可供替代的-->
+    <div class='class1'>
+    <ul>
+        <li>盒子模型都具备这些元素
+            <ul>
+                <li>content内容</li>
+                <li>padding填充</li>
+                <li>border边框</li>
+                <li>margin边界</li>
+            </ul>
+        </li>
+    </ul>
     </div>
-    
+    <img src='/static/box.jpg' alt='找不到图片'>
 </body>
 </html>
